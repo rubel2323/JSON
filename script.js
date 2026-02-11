@@ -29,18 +29,26 @@ const postData = (posts) => {
 
   console.log("Post button clicked");
 };
+
 // function to display the posts in the html
 const displayPosts = (posts) => {
+  // get the container element where the posts will be displayed
   const postsContainer = document.getElementById("posts-container");
+
+  postsContainer.innerHTML = ""; // Clear previous posts before displaying new ones
+
   console.log("Displaying posts:", postsContainer);
+
   // iterate over the posts and create html elements for each post
   posts.forEach((post) => {
     console.log(post.id);
 
     // create the html elements
     const li = document.createElement("li");
-    li.innerText = post.id;
+    li.innerText = post.title;
     // append the li to the ul
+    // append for the one time running
+
     postsContainer.appendChild(li);
   });
 };
