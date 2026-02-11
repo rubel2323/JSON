@@ -17,3 +17,30 @@ const loadData = () => {
     .then((data) => console.log(data))
     .catch((error) => console.error("Error fetching data:", error));
 };
+const postData = (posts) => {
+  console.log("Value of 'posts':", posts);
+
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((json) => {
+      console.log("Fetched posts:", json);
+      displayPosts(json);
+    });
+
+  console.log("Post button clicked");
+};
+// function to display the posts in the html
+const displayPosts = (posts) => {
+  const postsContainer = document.getElementById("posts-container");
+  console.log("Displaying posts:", postsContainer);
+  // iterate over the posts and create html elements for each post
+  posts.forEach((post) => {
+    console.log(post.id);
+
+    // create the html elements
+    const li = document.createElement("li");
+    li.innerText = post.id;
+    // append the li to the ul
+    postsContainer.appendChild(li);
+  });
+};
