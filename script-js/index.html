@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- tailwind css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- customized js -->
+    <script src="script.js"></script>
+    <!-- app css -->
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="button flex items-center justify-center py-25 flex-row gap-10">
+      <button class="btn btn-primary">Shikha</button>
+      <button class="btn btn-secondary">Rubel</button>
+      <button class="btn btn-accent">Nope</button>
+      <button class="btn btn-neutral">Neutral</button>
+    </div>
+
+    <div class="flex justify-center">
+      <button class="btn bg-amber-300 text-center" onclick="displayForm()">
+        Showform
+      </button>
+      <!-- Container for forms -->
+      <div class="showform"></div>
+    </div>
+  </body>
+</html>

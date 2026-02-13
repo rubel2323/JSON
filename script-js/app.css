@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Removed custom .flex to avoid overriding Tailwind's utility classes */
